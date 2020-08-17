@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0D47A1"
+    tools:context=".Add_New">
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="53dp"
+        android:layout_height="60dp"
+        app:srcCompat="?attr/actionModePasteDrawable"
+        tools:layout_editor_absoluteX="94dp"
+        tools:layout_editor_absoluteY="224dp" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="147dp"
+        android:layout_height="50dp"
+        android:text="@string/AddNew"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="132dp"
+        tools:layout_editor_absoluteY="128dp" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="159dp"
+        android:layout_height="49dp"
+        android:text="@string/txtN"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="147dp"
+        tools:layout_editor_absoluteY="235dp" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="159dp"
+        android:layout_height="49dp"
+        android:text="@string/cecklist"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="147dp"
+        tools:layout_editor_absoluteY="322dp" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="159dp"
+        android:layout_height="49dp"
+        android:text="@string/VoiceNo"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="147dp"
+        tools:layout_editor_absoluteY="403dp" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="159dp"
+        android:layout_height="49dp"
+        android:text="@string/reminder"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="147dp"
+        tools:layout_editor_absoluteY="487dp" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        app:srcCompat="@android:drawable/checkbox_on_background"
+        tools:layout_editor_absoluteX="99dp"
+        tools:layout_editor_absoluteY="322dp" />
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="54dp"
+        android:layout_height="52dp"
+        android:background="#FFFFFF"
+        android:tint="#00FFFFFF"
+        app:srcCompat="@android:drawable/ic_btn_speak_now"
+        tools:layout_editor_absoluteX="93dp"
+        tools:layout_editor_absoluteY="400dp" />
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="52dp"
+        android:layout_height="58dp"
+        app:srcCompat="@android:drawable/ic_popup_reminder"
+        tools:layout_editor_absoluteX="95dp"
+        tools:layout_editor_absoluteY="478dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

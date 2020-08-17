@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeShortTap">
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="112dp"
+        android:layout_height="99dp"
+        android:background="#AAA5A5"
+        android:text="Note 1"
+        android:textColor="#090909"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="149dp"
+        tools:layout_editor_absoluteY="299dp" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="112dp"
+        android:layout_height="99dp"
+        android:background="#AAA5A5"
+        android:text="Note 1"
+        android:textColor="#090909"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="167dp" />
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="112dp"
+        android:layout_height="99dp"
+        android:background="#C38E8E"
+        android:text="Checklist              item 1             item 2"
+        android:textColor="#090909"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="149dp"
+        tools:layout_editor_absoluteY="167dp" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="112dp"
+        android:layout_height="99dp"
+        android:background="#AAA5A5"
+        android:text="Note 1"
+        android:textColor="#090909"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="299dp" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="112dp"
+        android:layout_height="99dp"
+        android:background="#AAA5A5"
+        android:text="voice note"
+        android:textColor="#090909"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="283dp"
+        tools:layout_editor_absoluteY="299dp" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="112dp"
+        android:layout_height="99dp"
+        android:background="#AAA5A5"
+        android:text="Note 2              fusiudfhcjdksudfiehf       dufhisdbi"
+        android:textColor="#090909"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="283dp"
+        tools:layout_editor_absoluteY="167dp" />
+
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/checkbox_on_background"
+        tools:layout_editor_absoluteX="149dp"
+        tools:layout_editor_absoluteY="247dp" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="422dp"
+        android:layout_height="68dp"
+        android:background="#ED9292"
+        tools:layout_editor_absoluteX="-5dp"
+        tools:layout_editor_absoluteY="1dp">
+
+        <ImageView
+            android:id="@+id/imageView14"
+            android:layout_width="49dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="348dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@android:drawable/ic_menu_delete" />
+
+        <ImageView
+            android:id="@+id/imageView15"
+            android:layout_width="72dp"
+            android:layout_height="56dp"
+            app:srcCompat="@android:drawable/ic_delete"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="9dp" />
+
+        <ImageView
+            android:id="@+id/imageView16"
+            android:layout_width="54dp"
+            android:layout_height="61dp"
+            app:srcCompat="@android:drawable/ic_menu_edit"
+            tools:layout_editor_absoluteX="286dp"
+            tools:layout_editor_absoluteY="5dp" />
+
+        <ImageView
+            android:id="@+id/imageView13"
+            android:layout_width="62dp"
+            android:layout_height="66dp"
+            app:srcCompat="@android:drawable/btn_star_big_off"
+            tools:layout_editor_absoluteX="213dp"
+            tools:layout_editor_absoluteY="1dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

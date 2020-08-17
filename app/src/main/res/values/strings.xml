@@ -1,0 +1,78 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">Optimus Note</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    //voice
+    <string name="SaveVoice" translatable="false">Save Voice Note</string>
+    <string name="saveVoice" translatable="false">Voice Note Title</string>
+    <string name="save_btn" translatable="false">Save</string>
+    <string name="Cancel_btn" translatable="false">Cancel</string>
+    <string name="def_name" translatable="false">New Voice</string>
+    <string name="recDate" translatable="false">xx/xx/xxxx</string>
+    <string name="Date" translatable="false">Date</string>
+    <string name="recTime" translatable="false">xx:xx</string>
+    <string name="Time" translatable="false">Time</string>
+    <string name="RecName" translatable="false">Rec 001</string>
+    <string name="Rename" translatable="false">Rename</string>
+    <string name="Delete" translatable="false">Delete</string>
+    //common UI
+    <string name="AddNew" translatable="false">Add New</string>
+    <string name="txtN" translatable="false">Text Note</string>
+    <string name="cecklist" translatable="false">Check List</string>
+    <string name="VoiceNo" translatable="false">Voice Note</string>
+    <string name="reminder" translatable="false">Reminder</string>
+    <string name="view" translatable="false">Select View</string>
+    <string name="list" translatable="false">List</string>
+    <string name="grid" translatable="false">Grid</string>
+    <string name="sort" translatable="false">Sort</string>
+    <string name="ByDate" translatable="false">By Modified time</string>
+    <string name="ByTime" translatable="false">by Created time</string>
+    <string name="byAlpha" translatable="false">By Alphabetically</string>
+
+    <string name="app_name" tools:ignore="DuplicateDefinition">ON 4</string>
+    <string name="enterapin">Enter App PIN :</string>
+    <string name="getpin">Enter app PIN</string>
+    <string name="enterfrompin">Enter</string>
+    <string name="optimus">O P T I M U S</string>
+    <string name="notes">NOTES</string>
+    <string name="enteryourpin">Enter your PIN</string>
+    <string name="titlefornewtextnote">Title :</string>
+    <string name="enteryournewtexttitle">Enter your title</string>
+    <string name="backarrow">Back arrow</string>
+    <string name="more1">More</string>
+    <string name="gettitle">Get title</string>
+    <string name="addyourtext">Add your text here</string>
+    <string name="search">Search</string>
+    <string name="r1">reminder 1</string>
+    <string name="r2">reminder 2 priview</string>
+    <string name="r3">reminder3</string>
+    <string name="r4">to do list</string>
+    <string name="r5">timetable</string>
+    <string name="r6">food list</string>
+    <string name="r7">party list in 2020</string>
+    <string name="addnewreminder">add new reminder</string>
+
+    //reminder
+    <string name="app_name" tools:ignore="DuplicateDefinition">Reminder</string>
+    <string name="Name_Title">Title</string>
+    <string name="Name_Date">Date</string>
+    <string name="Name_Time">Time</string>
+    <string name="Title_Value">Name of the reminder</string>
+    <string name="Date_Value">DD/MM/YY</string>
+    <string name="Time_Value">XX XX</string>
+    <string name="Checkbox_Value">Time Remaining</string>
+    <string name="Button_Value1">Done</string>
+    <string name="Button_Value2">Cancel</string>
+
+    //checklist
+    <string name="Checklist_Title">Title</string>
+    <string name="Title_Description">Description</string>
+    <string name="CheckBox_Value1">Item1</string>
+    <string name="CheckBox_Value2">Item2</string>
+    <string name="CheckBox_Value3">Item3</string>
+    <string name="Plus_Mark">Add new</string>
+    <string name="Ticked_item"><strike>Checked item</strike></string>
+    <string name="app_name2">Check List</string>
+
+    <string name="Drop_down1">Untick all items</string>
+    <string name="Drop_down2">Discard al items</string>
+</resources>
