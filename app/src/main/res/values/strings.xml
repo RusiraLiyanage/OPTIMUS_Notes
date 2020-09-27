@@ -28,7 +28,7 @@
     <string name="ByTime" translatable="false">by Created time</string>
     <string name="byAlpha" translatable="false">By Alphabetically</string>
 
-    <string name="app_name" tools:ignore="DuplicateDefinition">ON 4</string>
+
     <string name="enterapin">Enter App PIN :</string>
     <string name="getpin">Enter app PIN</string>
     <string name="enterfrompin">Enter</string>
@@ -52,7 +52,7 @@
     <string name="addnewreminder">add new reminder</string>
 
     //reminder
-    <string name="app_name" tools:ignore="DuplicateDefinition">Reminder</string>
+
     <string name="Name_Title">Title</string>
     <string name="Name_Date">Date</string>
     <string name="Name_Time">Time</string>
@@ -75,4 +75,6 @@
 
     <string name="Drop_down1">Untick all items</string>
     <string name="Drop_down2">Discard al items</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
