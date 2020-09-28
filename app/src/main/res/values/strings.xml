@@ -5,6 +5,12 @@
     <string name="note_title">Note Title</string>
     <string name="note_subtitle">Note Subtitle</string>
     <string name="type_your_note_here">Type your note here...</string>
+    <string name="delete_note">Delete Note</string>
+    <string name="more">More</string>
+    <string name="delete_this_note">Delete This Note</string>
+    <string name="are_you_sure_to_delete">Are you sure to Delete</string>
+    <string name="cancel_delete">cancel delete</string>
+
     <!-- TODO: Remove or change this placeholder text -->
 
 

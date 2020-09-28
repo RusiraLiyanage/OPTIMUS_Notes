@@ -135,5 +135,7 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
+    <include layout="@layout/layout_m_delete" />
+
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
