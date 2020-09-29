@@ -113,20 +113,20 @@
             app:tint="@color/colorIcons" />
 
     </LinearLayout>
-    
+
     <ImageView
         android:id="@+id/imageAddNoteMain"
         android:layout_width="@dimen/_40sdp"
         android:layout_height="@dimen/_40sdp"
-        app:layout_goneMarginEnd="@dimen/_30sdp"
         android:background="@drawable/background_add_note_button"
         android:contentDescription="@string/app_name"
         android:padding="@dimen/_5sdp"
         android:src="@drawable/ic_addtype"
         app:layout_constraintBottom_toTopOf="@id/layoutQuickActions"
-        app:tint="@color/colorPrimary"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/layoutQuickActions"/>
+        app:layout_constraintTop_toTopOf="@id/layoutQuickActions"
+        app:layout_goneMarginEnd="@dimen/_30sdp"
+        app:tint="@color/colorPrimary" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
