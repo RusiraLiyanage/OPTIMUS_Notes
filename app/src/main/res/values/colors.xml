@@ -22,4 +22,10 @@
     <color name="colorNoteColor5">#000000</color>
     <color name="colorDelete">#FF4842</color>
     <color name="colorSearchBackground">#333333</color>
+
+    <color name="colorOptimusNotesMain">#ff008d</color>
+
+    <color name="colorMBlack">#080808</color>
+
+
 </resources>

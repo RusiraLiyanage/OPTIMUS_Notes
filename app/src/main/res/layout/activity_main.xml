@@ -17,8 +17,8 @@
         android:layout_marginEnd="@dimen/_12sdp"
         android:includeFontPadding="false"
         android:text="@string/optimus_notes"
-        android:textColor="@color/colorWhite"
-        android:textSize="@dimen/_10ssp"
+        android:textColor="@color/colorOptimusNotesMain"
+        android:textSize="@dimen/_15ssp"
         app:layout_constraintTop_toTopOf="parent"/>
 
     <LinearLayout
