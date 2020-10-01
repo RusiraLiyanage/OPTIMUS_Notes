@@ -77,4 +77,7 @@
     <string name="Drop_down2">Discard al items</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="rename">Rename</string>
+    <string name="delete">Delete</string>
+    <string name="RenameM">Rename Click</string>
 </resources>
