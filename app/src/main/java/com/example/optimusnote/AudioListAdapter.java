@@ -94,7 +94,7 @@ public class AudioListAdapter extends RecyclerView.Adapter<AudioListAdapter.Audi
 
 
 
-    private void showMenu(View v, final int pos) {
+    private void showMenu(final View v, final int pos) {
         PopupMenu popup = new PopupMenu(v.getContext(), v);
         popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
             @Override
@@ -118,10 +118,12 @@ public class AudioListAdapter extends RecyclerView.Adapter<AudioListAdapter.Audi
 
                     case R.id.menu_delete:
                         allFiles[pos].delete();
-                        notifyItemRemoved(pos);
-                        notifyItemRangeChanged(pos,allFiles.length);
-                        //Fragment listFragment = new AudiolistFragment();
+                        //notifyItemRemoved(pos);
+                        //notifyItemRangeChanged(pos,allFiles.length);
+                        Intent t = new Intent(v.getContext(),VoiceMainActivity.class);
+                        v.getContext().startActivity(t);
 
+                        
 
                         break;
 
