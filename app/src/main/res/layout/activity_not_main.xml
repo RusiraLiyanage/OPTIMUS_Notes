@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimary"
-    tools:context=".activities.MainActivity">
+    tools:context=".activities.NotMainActivity">
 
 
     <TextView
@@ -90,7 +90,7 @@
             android:layout_width="@dimen/_23sdp"
             android:layout_height="@dimen/_23sdp"
             android:contentDescription="@string/app_name"
-            android:src="@drawable/ic_add"
+            android:src="@drawable/ic_notifications"
             app:tint="@color/colorIcons"/>
 
 
@@ -100,7 +100,7 @@
             android:layout_height="@dimen/_23sdp"
             android:layout_marginStart="@dimen/_15sdp"
             android:contentDescription="@string/app_name"
-            android:src="@drawable/ic_image"
+            android:src="@drawable/ic_checklist"
             app:tint="@color/colorIcons" />
 
         <ImageView
@@ -109,7 +109,7 @@
             android:layout_height="@dimen/_23sdp"
             android:layout_marginStart="@dimen/_15sdp"
             android:contentDescription="@string/app_name"
-            android:src="@drawable/ic_voice"
+            android:src="@drawable/ic_voicenew"
             app:tint="@color/colorIcons" />
 
     </LinearLayout>

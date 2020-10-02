@@ -10,6 +10,12 @@
     <string name="delete_this_note">Delete This Note</string>
     <string name="are_you_sure_to_delete">Are you sure to Delete</string>
     <string name="cancel_delete">cancel delete</string>
+    <string name="add_text_note">Add Text Note</string>
+    <string name="add_voice_note">Add Voice Note</string>
+    <string name="voice_note">Voice Note</string>
+    <string name="reminder">Reminder</string>
+    <string name="check_list">Check List</string>
+    <string name="text_note">Text Note</string>
 
     <!-- TODO: Remove or change this placeholder text -->
 

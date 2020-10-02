@@ -2,7 +2,6 @@ package com.example.optimusnote.activities;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.loader.content.AsyncTaskLoader;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
@@ -12,13 +11,11 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 
 import com.example.optimusnote.R;
-import com.example.optimusnote.activities.AddNoteActivity;
 import com.example.optimusnote.adapters.NotesAdapter;
 import com.example.optimusnote.database.NotesDatabase;
 import com.example.optimusnote.entities.Note;
@@ -27,7 +24,7 @@ import com.example.optimusnote.listeners.NotesListener;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity implements NotesListener {
+public class NotMainActivity extends AppCompatActivity implements NotesListener {
 
     public static final int REQUEST_CODE_ADD_NOTE = 1;
     public static final int REQUEST_CODE_UPDATE_NOTE = 2;
@@ -43,7 +40,7 @@ public class MainActivity extends AppCompatActivity implements NotesListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_not_main);
 
         ImageView imageAddNoteMain = findViewById(R.id.imageAddNoteMain);
         imageAddNoteMain.setOnClickListener(new View.OnClickListener() {
