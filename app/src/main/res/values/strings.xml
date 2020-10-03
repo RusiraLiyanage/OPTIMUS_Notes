@@ -1,5 +1,22 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">Optimus Note</string>
+    <string name="optimus_notes">OPTIMUS NOTES</string>
+    <string name="search_notes">search notes</string>
+    <string name="note_title">Note Title</string>
+    <string name="note_subtitle">Note Subtitle</string>
+    <string name="type_your_note_here">Type your note here...</string>
+    <string name="delete_note">Delete Note</string>
+    <string name="more">More</string>
+    <string name="delete_this_note">Delete This Note</string>
+    <string name="are_you_sure_to_delete">Are you sure to Delete</string>
+    <string name="cancel_delete">cancel delete</string>
+    <string name="add_text_note">Add Text Note</string>
+    <string name="add_voice_note">Add Voice Note</string>
+    <string name="voice_note">Voice Note</string>
+    <string name="reminder">Reminder</string>
+    <string name="check_list">Check List</string>
+    <string name="text_note">Text Note</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     //voice
     <string name="SaveVoice" translatable="false">Save Voice Note</string>
@@ -19,7 +36,7 @@
     <string name="txtN" translatable="false">Text Note</string>
     <string name="cecklist" translatable="false">Check List</string>
     <string name="VoiceNo" translatable="false">Voice Note</string>
-    <string name="reminder" translatable="false">Reminder</string>
+    <!--<string name="reminder" translatable="false">Reminder</string>-->
     <string name="view" translatable="false">Select View</string>
     <string name="list" translatable="false">List</string>
     <string name="grid" translatable="false">Grid</string>
