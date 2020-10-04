@@ -20,10 +20,9 @@ public class ExampleUnitTest {
     public void setup(){
         mainchecklist = new Mainchecklist();
     }
+
     @Test
-
     public void addition_isCorrect() {
-
         assertEquals(4, 2 + 2);
     }
 }

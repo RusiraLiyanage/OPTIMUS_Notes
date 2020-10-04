@@ -1,3 +1,4 @@
+
 package com.example.optimusnote.activities.Adapter;
 
 import android.content.Context;
@@ -62,6 +63,7 @@ public class ToDoAdapter<DatabaseHandler> extends RecyclerView.Adapter<ToDoAdapt
         return n!=0;
     }
 
+
     public void setTasks(List<ToDoModel> todoList){
             this.todoList = todoList;
             notifyDataSetChanged();
@@ -76,9 +78,7 @@ public class ToDoAdapter<DatabaseHandler> extends RecyclerView.Adapter<ToDoAdapt
              notifyItemRemoved(position);
    }
 
-
-
-    public void editItem(int position){
+   public void editItem(int position){
             ToDoModel item = todoList.get(position);
             Bundle bundle = new Bundle();
             bundle.putInt("id",item.getId());
