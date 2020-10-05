@@ -7,4 +7,14 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name = "exampleToast">
+        <item name = "colorBackground">#94ffab</item>
+        <item name = "textColor">#000</item>
+        <item name = "iconLeft">@drawable/ic_baseline</item>
+        <item name = "strokeColor">#000</item>
+        <item name = "strokeWidth">3dp</item>
+        <item name = "length">LONG</item>
+        <item name = "cornerRadius">3dp</item>
+    </style>
+
 </resources>

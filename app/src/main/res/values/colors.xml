@@ -8,6 +8,11 @@
     <!--<color name="colorPrimaryDark">#292929</color>-->
     <color name="colorAccent">#FDBE3B</color>
 
+    <color name="txtcolor1">#FFFFFF</color>
+    <color name="txtviewColour">#9728AA</color>
+    <color name="txt_colorLoginbutton">#3CF127</color>
+    <color name="button_black">#161313</color>
+
     <color name="colorWhite">#010203</color>
 
     <color name="colorSearchIcon">#DBDBDB</color>

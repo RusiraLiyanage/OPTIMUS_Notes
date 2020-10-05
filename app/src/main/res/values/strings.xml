@@ -97,4 +97,14 @@
     <string name="rename">Rename</string>
     <string name="delete">Delete</string>
     <string name="RenameM">Rename Click</string>
+    <string name="U1">Update</string>
+    <string name="D1">Delete</string>
+    <string name="Reminder">Reminder</string>
+    <string name="login">login</string>
+    <string name="not_registerd">Not Registerd?</string>
+    <string name="register">register</string>
+    <string name="Register">Register</string>
+    <string name="Logged_In">Already Registerd?</string>
+    <string name="Login">Login</string>
+    <string name="Reminder2">Reminder</string>
 </resources>
