@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.optimusnote">
 
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,20 +11,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".check2"></activity>
-        <activity android:name=".Checklist" />
-        <activity android:name=".reminder" />
-        <activity android:name=".TextNote" />
-        <activity android:name=".Home" />
-        <activity android:name=".Pin" />
-        <activity android:name=".Sort" />
-        <activity android:name=".view" />
-        <activity android:name=".HomeShortTap" />
-        <activity android:name=".Add_New" />
-        <activity android:name=".PlayRec_Name" />
-        <activity android:name=".PlayRec" />
-        <activity android:name=".SaveRecord" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".SelectType" />
+        <activity android:name=".ViewDataActivity" />
+
+        <receiver android:name="com.allyants.notifyme.NotificationPublisher" />
+        <receiver android:name="com.allyants.notifyme.BootNotifyMe">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+
+                <category android:name="android.intent.category.HOME" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".reminder">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
