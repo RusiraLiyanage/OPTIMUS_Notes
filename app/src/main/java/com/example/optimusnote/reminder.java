@@ -27,6 +27,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.optimusnote.activities.NotMainActivity;
 import com.muddzdev.styleabletoastlibrary.StyleableToast;
 import com.allyants.notifyme.NotifyMe;
 import com.wdullaer.materialdatetimepicker.time.TimePickerDialog;
@@ -92,7 +93,8 @@ public class reminder extends AppCompatActivity implements DatePickerDialog.OnDa
         editTextDate2 = (EditText) findViewById(R.id.editTextDate2);
         editTextTime2 = (EditText) findViewById(R.id.editTextTime2);
         imageViewBell = (ImageView) findViewById(R.id.imageViewBell);
-        anim = (AnimationDrawable) buttonInsert.getBackground();
+        ImageView imageViewBack = (ImageView) findViewById(R.id.imageViewBack);
+        /*anim = (AnimationDrawable) buttonInsert.getBackground();
         anim.setEnterFadeDuration(2300);
         anim.setExitFadeDuration(2300);
 
@@ -114,7 +116,7 @@ public class reminder extends AppCompatActivity implements DatePickerDialog.OnDa
 
         anim6 = (AnimationDrawable) buttonRemind.getBackground();
         anim6.setEnterFadeDuration(150);
-        anim6.setExitFadeDuration(150);
+        anim6.setExitFadeDuration(150);*/
         
         dpd = DatePickerDialog.newInstance(
                 reminder.this,
@@ -135,7 +137,16 @@ public class reminder extends AppCompatActivity implements DatePickerDialog.OnDa
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                NotifyMe.cancel(getApplicationContext(),"test");
+                Intent intent = new Intent(getApplicationContext(), NotMainActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        imageViewBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), NotMainActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -237,7 +248,7 @@ public class reminder extends AppCompatActivity implements DatePickerDialog.OnDa
         String id = textID.getText().toString();
         return db.update(DatabaseHelper.TABLE_NAME, contentValues, DatabaseHelper.COLS_1 + "=?", new String[]{id}) > 0;
     }
-
+/*
     @Override
     protected void onResume() {
         super.onResume();
@@ -282,6 +293,6 @@ public class reminder extends AppCompatActivity implements DatePickerDialog.OnDa
         if (anim6 != null && !anim6.isRunning()) {
             anim6.stop();
         }
-    }
+    }*/
 
 }

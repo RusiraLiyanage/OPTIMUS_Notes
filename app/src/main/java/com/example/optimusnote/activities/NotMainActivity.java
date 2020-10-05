@@ -22,6 +22,7 @@ import com.example.optimusnote.adapters.NotesAdapter;
 import com.example.optimusnote.database.NotesDatabase;
 import com.example.optimusnote.entities.Note;
 import com.example.optimusnote.listeners.NotesListener;
+import com.example.optimusnote.reminder;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -48,6 +49,15 @@ public class NotMainActivity extends AppCompatActivity implements NotesListener 
         setContentView(R.layout.activity_not_main);
         ImageView addVoice = findViewById(R.id.imageAddVoice);
         ImageView imageAddNoteMain = findViewById(R.id.imageAddNoteMain);
+        ImageView addReminder = findViewById(R.id.imageAddNote);
+
+        addReminder.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), reminder.class);
+                startActivity(intent);
+            }
+        });
 
         addVoice.setOnClickListener(new View.OnClickListener() {
             @Override
