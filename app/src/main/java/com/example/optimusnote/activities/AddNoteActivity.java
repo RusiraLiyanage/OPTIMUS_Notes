@@ -38,6 +38,7 @@ public class AddNoteActivity extends AppCompatActivity {
 
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -66,6 +67,8 @@ public class AddNoteActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
               saveNote();
+              Intent intent = new Intent(getApplicationContext(),NotMainActivity.class);
+              startActivity(intent);
             }
         });
 
@@ -78,6 +81,8 @@ public class AddNoteActivity extends AppCompatActivity {
             setViewOrUpdateNote();
         }
     }
+
+
 
     private void setViewOrUpdateNote(){
 
@@ -116,14 +121,14 @@ public class AddNoteActivity extends AppCompatActivity {
                 return null;
             }
 
-            @Override
-            protected void onPostExecute(Void aVoid) {
+           // @Override
+            /*protected void onPostExecute(Void aVoid) {
                 super.onPostExecute(aVoid);
-                Intent intent = new Intent();
+               /* Intent intent = new Intent();
                 setResult(RESULT_OK,intent);
                 finish();
 
-            }
+            }*/
 
         }
         new SaveNoteTask().execute();
@@ -183,15 +188,18 @@ public class AddNoteActivity extends AppCompatActivity {
                                 return null;
                             }
 
-                            @Override
+                            /*@Override
                             protected void onPostExecute(Void aVoid) {
                                 super.onPostExecute(aVoid);
-                                Intent intent = new Intent();
+                                Intent intent = new Intent(getApplicationContext(),NotMainActivity.class);
                                 intent.putExtra("isNoteDeleted",true);
                                 setResult(RESULT_OK,intent);
                                 finish();
-                            }
+                            }*/
+
                         }
+                        Intent intent = new Intent(getApplicationContext(),NotMainActivity.class);
+                        startActivity(intent);
                         new DeleteNoteTask().execute();
                     }
                 });

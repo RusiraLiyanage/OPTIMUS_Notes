@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
+    android:background="#EBECF3"
     tools:context=".activities.NotMainActivity">
 
 
@@ -126,7 +126,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/layoutQuickActions"
         app:layout_goneMarginEnd="@dimen/_30sdp"
-        app:tint="@color/colorPrimary" />
+        app:tint="#EBECF3" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

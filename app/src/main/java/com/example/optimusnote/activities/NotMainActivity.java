@@ -14,8 +14,10 @@ import android.text.TextWatcher;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.example.optimusnote.R;
+import com.example.optimusnote.VoiceMainActivity;
 import com.example.optimusnote.adapters.NotesAdapter;
 import com.example.optimusnote.database.NotesDatabase;
 import com.example.optimusnote.entities.Note;
@@ -37,12 +39,27 @@ public class NotMainActivity extends AppCompatActivity implements NotesListener 
 
     private int noteClickedPosition = -1;
 
+    private long back;
+    private Toast backToast;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_not_main);
-
+        ImageView addVoice = findViewById(R.id.imageAddVoice);
         ImageView imageAddNoteMain = findViewById(R.id.imageAddNoteMain);
+
+        addVoice.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                        Intent intent = new Intent(getApplicationContext(), VoiceMainActivity.class);
+                        startActivity(intent);
+
+
+            }
+        });
+
         imageAddNoteMain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -87,6 +104,23 @@ public class NotMainActivity extends AppCompatActivity implements NotesListener 
 
 
     }
+
+    /*@Override
+    public void onBackPressed() {
+        Intent intent = new Intent(getApplicationContext(),NotMainActivity.class);
+
+        System.exit(0);
+        /*if(back+2000>System.currentTimeMillis()){
+            backToast.cancel();
+            System.exit(0);
+            return;
+
+        }else{
+            backToast = Toast.makeText(getBaseContext(),"Press Back again to exit",Toast.LENGTH_SHORT);
+            backToast.show();
+        }
+        back = System.currentTimeMillis();
+    }*/
 
     @Override
     public void onNoteClicked(Note note, int position) {

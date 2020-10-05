@@ -3,6 +3,7 @@ package com.example.optimusnote;
 import android.Manifest;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.media.MediaRecorder;
 import android.os.Bundle;
@@ -24,6 +25,8 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.optimusnote.activities.NotMainActivity;
+
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -40,7 +43,7 @@ public class RecordFragment extends Fragment implements View.OnClickListener {
     private ImageButton listBtn;
     private ImageButton redBtn;
     private TextView fileNameTxt;
-
+    private ImageButton backBtn;
 
     private boolean isRec = false;
 
@@ -109,9 +112,11 @@ public class RecordFragment extends Fragment implements View.OnClickListener {
         redBtn = view.findViewById(R.id.record_btn);
         timer = view.findViewById(R.id.recordTimer);
         fileNameTxt = view.findViewById(R.id.rec_fileName);
+        backBtn = view.findViewById(R.id.imageBack);
 
         listBtn.setOnClickListener(this);
         redBtn.setOnClickListener(this);
+        backBtn.setOnClickListener(this);
         //timer.setOnClickListener(this);
     }
 
@@ -155,6 +160,29 @@ public class RecordFragment extends Fragment implements View.OnClickListener {
                         isRec=true;}
                 }
                 break;
+
+            case R.id.imageBack:
+
+
+                if(isRec){
+                    AlertDialog.Builder alterDialog = new AlertDialog.Builder(getContext());
+                    alterDialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            Intent t = new Intent(getContext(), NotMainActivity.class);
+                            startActivity(t);
+                            isRec = false;
+                        }
+                    });
+                    alterDialog.setNegativeButton("Cancel",null);
+                    alterDialog.setTitle("Audio still Recording");
+                    alterDialog.setMessage("Are you sure you want to stop the recording");
+                    alterDialog.create().show();
+
+                }else{
+                    Intent t = new Intent(getContext(), NotMainActivity.class);
+                    startActivity(t);
+                }
         }
     }
 
