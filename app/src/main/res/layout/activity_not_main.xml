@@ -8,32 +8,40 @@
     tools:context=".activities.NotMainActivity">
 
 
-    <TextView
-        android:id="@+id/textMyNotes"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="285dp"
+        android:layout_height="45dp"
         android:layout_marginStart="@dimen/_12sdp"
-        android:layout_marginTop="@dimen/_20sdp"
+
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="@dimen/_12sdp"
         android:includeFontPadding="false"
+        android:src="@drawable/opti2"
         android:text="@string/optimus_notes"
-        android:textColor="@color/colorOptimusNotesMain"
-        android:textSize="@dimen/_15ssp"
-        app:layout_constraintTop_toTopOf="parent"/>
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="@dimen/_18ssp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
         android:id="@+id/layoutSearch"
-        android:layout_width="match_parent"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/_8sdp"
-        android:layout_marginTop="@dimen/_20sdp"
-        app:layout_goneMarginEnd="@dimen/_8sdp"
+        android:layout_marginTop="50dp"
         android:background="@drawable/background_search"
         android:gravity="center_vertical"
         android:orientation="horizontal"
         android:paddingStart="@dimen/_10sdp"
         android:paddingEnd="@dimen/_10sdp"
-        app:layout_constraintTop_toTopOf="@id/textMyNotes">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/imageView3"
+        app:layout_goneMarginEnd="@dimen/_8sdp">
 
         <ImageView
             android:layout_width="@dimen/_20sdp"
@@ -41,7 +49,7 @@
             android:contentDescription="@string/app_name"
             android:src="@drawable/ic_search"
             app:tint="@color/colorSearchIcon" />
-        
+
         <EditText
             android:id="@+id/inputSearch"
             android:layout_width="match_parent"
@@ -55,8 +63,7 @@
             android:inputType="text"
             android:textColor="@color/colorWhite"
             android:textColorHint="@color/colorTextHint"
-            android:textSize="@dimen/_13ssp"
-            />
+            android:textSize="@dimen/_13ssp" />
 
     </LinearLayout>
 
@@ -71,8 +78,7 @@
         android:paddingEnd="@dimen/_12sdp"
         android:paddingBottom="@dimen/_12sdp"
         app:layout_constraintBottom_toTopOf="@id/layoutQuickActions"
-        app:layout_constraintTop_toBottomOf="@id/layoutSearch"
-        />
+        app:layout_constraintTop_toBottomOf="@id/layoutSearch" />
 
     <LinearLayout
         android:id="@+id/layoutQuickActions"
@@ -91,7 +97,7 @@
             android:layout_height="@dimen/_23sdp"
             android:contentDescription="@string/app_name"
             android:src="@drawable/ic_notifications"
-            app:tint="@color/colorIcons"/>
+            app:tint="@color/colorNoteColor3" />
 
 
         <ImageView
@@ -101,7 +107,7 @@
             android:layout_marginStart="@dimen/_15sdp"
             android:contentDescription="@string/app_name"
             android:src="@drawable/ic_checklist"
-            app:tint="@color/colorIcons" />
+            app:tint="@color/colorNoteColor2" />
 
         <ImageView
             android:id="@+id/imageAddVoice"
@@ -110,7 +116,7 @@
             android:layout_marginStart="@dimen/_15sdp"
             android:contentDescription="@string/app_name"
             android:src="@drawable/ic_voicenew"
-            app:tint="@color/colorIcons" />
+            app:tint="@color/txt_colorLoginbutton" />
 
     </LinearLayout>
 
@@ -118,6 +124,7 @@
         android:id="@+id/imageAddNoteMain"
         android:layout_width="@dimen/_40sdp"
         android:layout_height="@dimen/_40sdp"
+        android:layout_marginEnd="16dp"
         android:background="@drawable/background_add_note_button"
         android:contentDescription="@string/app_name"
         android:padding="@dimen/_5sdp"
@@ -125,6 +132,7 @@
         app:layout_constraintBottom_toTopOf="@id/layoutQuickActions"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/layoutQuickActions"
+        app:layout_constraintVertical_bias="0.557"
         app:layout_goneMarginEnd="@dimen/_30sdp"
         app:tint="#EBECF3" />
 

@@ -4,43 +4,45 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#6191F1"
+    android:background="#EBECF3"
     tools:context=".RecordFragment">
+
 
     <TextView
         android:id="@+id/rec_fileName"
-        android:layout_width="331dp"
-        android:layout_height="121dp"
+        android:layout_width="330dp"
+        android:layout_height="89dp"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
         android:fontFamily="casual"
         android:lineHeight="20dp"
-        android:text="Press the mic button\n\nto start Recording"
+        android:text="Press the mic button\nto start Recording"
         android:textAlignment="center"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.47"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.162"></TextView>
+        app:layout_constraintVertical_bias="0.267"></TextView>
 
     <ImageButton
         android:id="@+id/imageBack"
-        android:layout_width="58dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="@dimen/_6sdp"
-        android:layout_marginTop="@dimen/_20sdp"
-        android:background="#1A237E"
+        android:layout_width="72dp"
+        android:layout_height="73dp"
+        android:background="@drawable/background_add_note_button"
         android:contentDescription="@string/app_name"
         android:padding="16dp"
-        android:src="@drawable/ic_back"
-        android:tint="#4A148C"
+        android:src="@drawable/ic_rback"
+        android:tint="#FEFDFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.185"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:tint="@color/colorIcons" />
-
+        app:layout_constraintVertical_bias="0.875"
+        app:tint="#FFFFFF" />
 
     <Chronometer
         android:id="@+id/recordTimer"
@@ -50,16 +52,16 @@
         android:textSize="64sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.549"
+        app:layout_constraintHorizontal_bias="0.545"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.416"></Chronometer>
+        app:layout_constraintVertical_bias="0.447"></Chronometer>
 
     <ImageButton
         android:id="@+id/record_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="#6191F1"
+        android:background="#EBECF3"
         android:src="@drawable/record_btn_stopped"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -70,15 +72,42 @@
 
     <ImageButton
         android:id="@+id/rec_list"
-        android:layout_width="68dp"
-        android:layout_height="63dp"
-        android:background="#51A9ED"
+        android:layout_width="72dp"
+        android:layout_height="73dp"
+        android:background="@drawable/background_reclist"
         android:padding="16dp"
-        android:src="@drawable/recorder_list_btn"
+        android:src="@drawable/ic_list"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.825"
+        app:layout_constraintHorizontal_bias="0.817"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.829"></ImageButton>
+        app:layout_constraintVertical_bias="0.875"></ImageButton>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="304dp"
+        android:layout_height="65dp"
+        android:src="@drawable/opti"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.024" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Voice Note"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="@dimen/_18ssp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.13" />
 </androidx.constraintlayout.widget.ConstraintLayout>

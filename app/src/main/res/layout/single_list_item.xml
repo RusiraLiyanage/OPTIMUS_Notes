@@ -40,16 +40,17 @@
     <ImageButton
         android:id="@+id/list_item_more"
         android:layout_width="36dp"
-        android:layout_height="match_parent"
+        android:layout_height="36dp"
 
         android:layout_gravity="center_vertical|end"
 
+        android:background="@drawable/background_reclist"
         android:contentDescription="@null"
         android:src="@drawable/ic_more_vert_transparent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.93"
+        app:layout_constraintHorizontal_bias="0.864"
         app:layout_constraintStart_toEndOf="@+id/list_title"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.555" />
+        app:layout_constraintVertical_bias="0.488" />
 </androidx.constraintlayout.widget.ConstraintLayout>
