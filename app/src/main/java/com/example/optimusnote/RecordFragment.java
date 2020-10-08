@@ -24,6 +24,7 @@ import android.widget.Chronometer;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.optimusnote.activities.NotMainActivity;
 
@@ -151,13 +152,16 @@ public class RecordFragment extends Fragment implements View.OnClickListener {
                     stopRecording();
                     redBtn.setImageDrawable(getResources().getDrawable(R.drawable.record_btn_stopped));
                     isRec = false;
+                    Toast.makeText(v.getContext(),"Voice Note Saved",Toast.LENGTH_LONG).show();
                 }
                 else{
                     //start recording
                     if(checkPermission()){
                         startRecording();
                         redBtn.setImageDrawable(getResources().getDrawable(R.drawable.record_btn_recording));
-                        isRec=true;}
+                        isRec=true;
+                        Toast.makeText(v.getContext(),"Voice Note Recording",Toast.LENGTH_LONG).show();
+                    }
                 }
                 break;
 
