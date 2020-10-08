@@ -107,4 +107,5 @@
     <string name="Logged_In">Already Registerd?</string>
     <string name="Login">Login</string>
     <string name="Reminder2">Reminder</string>
+    <string name="Clear">Clear All</string>
 </resources>

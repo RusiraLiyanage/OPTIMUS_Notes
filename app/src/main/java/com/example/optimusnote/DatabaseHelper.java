@@ -38,5 +38,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         Cursor cursor = sqLiteDatabase.rawQuery("Select * from " + TABLE_NAME,null);
         return cursor;
     }
+    public Cursor getContact(String ID, SQLiteDatabase sqLiteDatabase){
+        String[] projections = {COLS_2,COLS_3,COLS_4};
+        String selection = COLS_1 + " LIKE?";
+        String[] selection_args = {ID};
+        Cursor cursor = sqLiteDatabase.query(TABLE_NAME,projections,selection,selection_args,null,null,null);
+        return cursor;
+    }
 }
 

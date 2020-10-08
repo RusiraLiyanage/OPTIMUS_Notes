@@ -1,16 +1,10 @@
 package com.example.optimusnote;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.NotificationBuilderWithBuilderAccessor;
-import androidx.core.app.NotificationCompat;
-import androidx.core.app.NotificationManagerCompat;
 
-import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
-import android.app.PendingIntent;
 import android.content.ContentValues;
-import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -18,14 +12,10 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.graphics.drawable.AnimationDrawable;
 import android.os.Build;
 import android.os.Bundle;
-import android.provider.ContactsContract;
 import android.view.View;
 import android.widget.Button;
-import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.optimusnote.activities.NotMainActivity;
 import com.muddzdev.styleabletoastlibrary.StyleableToast;
@@ -33,11 +23,7 @@ import com.allyants.notifyme.NotifyMe;
 import com.wdullaer.materialdatetimepicker.time.TimePickerDialog;
 import com.wdullaer.materialdatetimepicker.date.DatePickerDialog;
 
-import java.sql.Time;
-import java.util.ArrayList;
 import java.util.Calendar;
-
-import static com.example.optimusnote.DatabaseHelper.TABLE_NAME;
 
 public class reminder extends AppCompatActivity implements DatePickerDialog.OnDateSetListener, TimePickerDialog.OnTimeSetListener {
 
@@ -45,11 +31,14 @@ public class reminder extends AppCompatActivity implements DatePickerDialog.OnDa
     TimePickerDialog tpd;
     DatePickerDialog dpd;
     Button buttonInsert, buttonUpdate, buttonDelete, buttonView, button2, buttonRemind;
-    EditText TextPersonName, editTextDate2, editTextTime2, textID;
+    EditText TextTitleName, editTextDate2, editTextTime2, textID;
     ImageView imageViewBell;
     private AnimationDrawable anim, anim2, anim3, anim4, anim5,anim6;
     SQLiteOpenHelper openHelper;
     SQLiteDatabase db;
+    DatabaseHelper databaseHelper;
+    String TheID;
+
 
     public void onDateSet(DatePickerDialog view, int year, int monthOfYear, int dayOfMonth) {
         now.set(Calendar.YEAR, year);
@@ -62,9 +51,10 @@ public class reminder extends AppCompatActivity implements DatePickerDialog.OnDa
         now.set(Calendar.HOUR_OF_DAY, hourOfDay);
         now.set(Calendar.MINUTE, minute);
         now.set(Calendar.SECOND, second);
+        StyleableToast.makeText(getApplicationContext(), "You will be notified ! ", R.style.exampleToast).show();
 
         NotifyMe notifyMe = new NotifyMe.Builder(getApplicationContext())
-                .title(TextPersonName.getText().toString())
+                .title(TextTitleName.getText().toString())
                 .content("The Date: " + editTextDate2.getText().toString() + "\n" + "The Time: " + editTextTime2.getText().toString() + "\n")
                 .color(255, 0, 0, 255)
                 .led_color(255, 255, 255, 255)
@@ -89,7 +79,7 @@ public class reminder extends AppCompatActivity implements DatePickerDialog.OnDa
         button2 = (Button) findViewById(R.id.button2);
         buttonRemind = (Button) findViewById(R.id.buttonRemind);
         textID = (EditText) findViewById(R.id.txtId);
-        TextPersonName = (EditText) findViewById(R.id.TextPersonName);
+        TextTitleName = (EditText) findViewById(R.id.TextTitleName);
         editTextDate2 = (EditText) findViewById(R.id.editTextDate2);
         editTextTime2 = (EditText) findViewById(R.id.editTextTime2);
         imageViewBell = (ImageView) findViewById(R.id.imageViewBell);
@@ -137,8 +127,18 @@ public class reminder extends AppCompatActivity implements DatePickerDialog.OnDa
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), NotMainActivity.class);
-                startActivity(intent);
+                String Text1 = TextTitleName.getText().toString();
+                String Text2 = editTextDate2.getText().toString();
+                String Text3 = editTextTime2.getText().toString();
+                if(Text1.isEmpty() && Text2.isEmpty() && Text3.isEmpty()){
+                    StyleableToast.makeText(getApplicationContext(), "All fields are already empty!", R.style.exampleToast).show();
+                }
+                else {
+                    TextTitleName.setText("");
+                    editTextDate2.setText("");
+                    editTextTime2.setText("");
+                    StyleableToast.makeText(getApplicationContext(), "All fields are Cleared!", R.style.exampleToast).show();
+                }
             }
         });
 
@@ -178,7 +178,7 @@ public class reminder extends AppCompatActivity implements DatePickerDialog.OnDa
         buttonInsert.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String name = TextPersonName.getText().toString();
+                String name = TextTitleName.getText().toString();
                 String date = editTextDate2.getText().toString();
                 String time = editTextTime2.getText().toString();
                 db = openHelper.getWritableDatabase();
@@ -203,7 +203,7 @@ public class reminder extends AppCompatActivity implements DatePickerDialog.OnDa
 
                 db = openHelper.getWritableDatabase();
 
-                String name = TextPersonName.getText().toString();
+                String name = TextTitleName.getText().toString();
 
                 String date = editTextDate2.getText().toString();
 
@@ -247,6 +247,26 @@ public class reminder extends AppCompatActivity implements DatePickerDialog.OnDa
         contentValues.put(DatabaseHelper.COLS_4, time);
         String id = textID.getText().toString();
         return db.update(DatabaseHelper.TABLE_NAME, contentValues, DatabaseHelper.COLS_1 + "=?", new String[]{id}) > 0;
+    }
+
+    public void SearchContact(View view){
+        TheID = textID.getText().toString();
+        databaseHelper = new DatabaseHelper(getApplicationContext());
+        db = databaseHelper.getReadableDatabase();
+        Cursor cursor = databaseHelper.getContact(TheID,db);
+        if(cursor.moveToNext())
+        {
+            String Title = cursor.getString(cursor.getColumnIndex("Title"));
+            String Date = cursor.getString(cursor.getColumnIndex("Date"));
+            String Time = cursor.getString(cursor.getColumnIndex("Time"));
+            TextTitleName.setText(Title);
+            editTextDate2.setText(Date);
+            editTextTime2.setText(Time);
+
+        }
+        else{
+            StyleableToast.makeText(getApplicationContext(), "Invalid ID ! ", R.style.exampleToast).show();
+        }
     }
 /*
     @Override
