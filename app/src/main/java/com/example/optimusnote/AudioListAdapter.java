@@ -120,6 +120,7 @@ public class AudioListAdapter extends RecyclerView.Adapter<AudioListAdapter.Audi
                         allFiles[pos].delete();
                         //notifyItemRemoved(pos);
                         //notifyItemRangeChanged(pos,allFiles.length);
+                        Toast.makeText(v.getContext(),"Voice Note Deleted",Toast.LENGTH_LONG).show();
                         Intent t = new Intent(v.getContext(),VoiceMainActivity.class);
                         v.getContext().startActivity(t);
 
