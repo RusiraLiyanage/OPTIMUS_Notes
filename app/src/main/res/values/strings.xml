@@ -108,4 +108,10 @@
     <string name="Login">Login</string>
     <string name="Reminder2">Reminder</string>
     <string name="Clear">Clear All</string>
+    <string name="Splash_Name">OPTIMUS NOTES</string>
+    <string name="Splash_Description">Notes CheckLists Reminder VoiceNotes</string>
+    <string name="Value1">Notes</string>
+    <string name="value2">CheckLists</string>
+    <string name="value3">Reminders</string>
+    <string name="value4">Voice Notes</string>
 </resources>
