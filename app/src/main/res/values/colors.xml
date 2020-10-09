@@ -36,6 +36,12 @@
 
     <color name="colorMBlack">#080808</color>
     <color name="Title_Colour">#CF6E66</color>
+    <color name="backR">#EEA6A0</color>
+    <color name="backR2">#FCCFCC</color>
+    <color name="back3R">#FADFDD</color>
+    <color name="titleR">#F1A7A2</color>
+    <color name="TitleColor2">#DB8E88</color>
+    <color name="TitleColor3">#C7827D</color>
 
 
 </resources>

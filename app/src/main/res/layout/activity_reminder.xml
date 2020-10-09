@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FAF4F4"
+    android:background="@color/back3R"
     tools:context=".reminder">
 
     android:fontFamily="serif"
@@ -41,8 +41,8 @@
 
     <EditText
         android:id="@+id/TextTitleName"
-        android:layout_width="248dp"
-        android:layout_height="49dp"
+        android:layout_width="259dp"
+        android:layout_height="47dp"
         android:ems="10"
         android:fontFamily="sans-serif-smallcaps"
         android:hint="@string/Title_Value"
@@ -51,6 +51,7 @@
         android:singleLine="false"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textSize="24sp"
+        android:textStyle="bold"
         android:typeface="normal"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -183,6 +184,7 @@
         android:hint="Enter time"
         android:inputType="textPersonName"
         android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.238"
@@ -245,6 +247,7 @@
         android:hint="DD/MM/YY"
         android:inputType="textPersonName"
         android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.238"
@@ -263,7 +266,7 @@
         android:layout_width="199dp"
         android:layout_height="49dp"
         android:layout_marginTop="20dp"
-        android:background="#F8CFCF"
+        android:background="@color/titleR"
         android:fontFamily="casual"
         android:text="@string/Reminder2"
         android:textSize="36sp"
