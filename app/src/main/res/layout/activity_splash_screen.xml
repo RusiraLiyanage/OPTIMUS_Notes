@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#27c2e8"
+    android:background="#FFFF"
     tools:context=".SplashScreen">
 
     <ImageView
         android:id="@+id/imageView4"
-        android:layout_width="300dp"
-        android:layout_height="291dp"
+        android:layout_width="306dp"
+        android:layout_height="270dp"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
         android:src="@drawable/optimusnotes"
@@ -19,7 +19,7 @@
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.013" />
+        app:layout_constraintVertical_bias="0.11" />
 
     <TextView
         android:id="@+id/textView6"
@@ -28,6 +28,7 @@
         android:layout_marginTop="328dp"
         android:fontFamily="sans-serif-smallcaps"
         android:text="@string/Value1"
+        android:textColor="#3F51B5"
         android:textSize="32sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -42,6 +43,7 @@
         android:layout_marginTop="452dp"
         android:fontFamily="sans-serif-smallcaps"
         android:text="@string/value2"
+        android:textColor="#3F51B5"
         android:textSize="32sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -56,6 +58,7 @@
         android:layout_marginTop="392dp"
         android:fontFamily="sans-serif-smallcaps"
         android:text="@string/value3"
+        android:textColor="#3F51B5"
         android:textSize="32sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -70,6 +73,7 @@
         android:layout_marginTop="516dp"
         android:fontFamily="sans-serif-smallcaps"
         android:text="@string/value4"
+        android:textColor="#3F51B5"
         android:textSize="32sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
